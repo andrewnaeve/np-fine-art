@@ -6,4 +6,5 @@ description: '9" x 12", oil on linen'
 tags:
   - ''
 ---
+
 ![null](/img/lanterns.jpg)
