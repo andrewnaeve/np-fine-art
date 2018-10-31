@@ -34,7 +34,12 @@ collections:
             }
           - { label: Title, name: title, widget: string }
           - { label: Art, name: pics, widget: list }
-          - { label: smart, name: smart, widget: object }
+          - {
+              label: smart,
+              name: smart,
+              widget: object,
+              fields: [{ label: hi, name: hi, widget: string }],
+            }
           - {
               label: listier,
               name: lister,
