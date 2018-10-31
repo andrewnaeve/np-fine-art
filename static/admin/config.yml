@@ -22,9 +22,9 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'src/pages/broducts/index.md'
-        label: 'broducts Page'
-        name: 'broducts'
+      - file: 'src/pages/portfolio/index.md'
+        label: 'portfolio Page'
+        name: 'portfolio'
         fields:
           - {
               label: 'Template Key',
