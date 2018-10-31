@@ -32,38 +32,14 @@ collections:
               widget: 'hidden',
               default: 'product-page',
             }
-          - { label: Title, name: title, widget: string }
-          - { label: Art, name: pics, widget: list }
           - {
-              label: smart,
-              name: smart,
-              widget: object,
-              fields: [{ label: hi, name: hi, widget: string }],
-            }
-          - {
-              label: listier,
-              name: lister,
+              label: Portfolio,
+              name: portfolio,
               widget: list,
-              fields: [{ label: boob, name: boopy, widget: string }],
-            }
-          - {
-              label: Main,
-              name: main,
-              widget: object,
               fields:
                 [
-                  { label: Heading, name: heading, widget: string },
-                  { label: Description, name: description, widget: text },
-                  {
-                    label: Image1,
-                    name: image1,
-                    widget: object,
-                    fields:
-                      [
-                        { label: Image, name: image, widget: image },
-                        { label: Alt, name: alt, widget: string },
-                        { label: Bromage, name: image, widget: image },
-                      ],
-                  },
+                  { label: 'Title', name: title, widget: string },
+                  { label: 'Description', name: 'description', widget: string },
+                  { label: 'Image', name: image, widget: image },
                 ],
             }
