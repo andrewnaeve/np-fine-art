@@ -23,8 +23,8 @@ collections:
     label: 'Pages'
     files:
       - file: 'src/pages/broducts/index.md'
-        label: 'Broducts Page'
-        name: 'Broductz'
+        label: 'broducts Page'
+        name: 'broducts'
         fields:
           - {
               label: 'Template Key',
