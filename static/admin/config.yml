@@ -33,6 +33,14 @@ collections:
               default: 'product-page',
             }
           - { label: Title, name: title, widget: string }
+          - { label: Art, name: pics, widget: list }
+          - { label: smart, name: smart, widget: object }
+          - {
+              label: listier,
+              name: lister,
+              widget: list,
+              fields: [{ label: boob, name: boopy, widget: string }],
+            }
           - {
               label: Main,
               name: main,
