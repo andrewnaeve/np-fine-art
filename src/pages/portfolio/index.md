@@ -1,5 +1,8 @@
 ---
-templateKey: product-page
+templateKey: 'product-page'
+path: /portfolio
+title: Our Coffee
+heading: What we offer
 portfolio:
   - description: '9" x 12", oil on linen'
     image: /img/lanterns.jpg
@@ -49,4 +52,3 @@ portfolio:
   - description: '36" x 36", oil on canvas'
     title: Zorro's Bouquet
 ---
-

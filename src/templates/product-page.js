@@ -48,7 +48,7 @@ const ProductPage = ({ data }) => {
   return (
     <Layout>
       {portfolio.map(({ title, description, image }) => (
-        <ProductPageTemplate image={image} title={title} description={description} />
+        <ProductPageTemplate key={title} image={image} title={title} description={description} />
       ))}
     </Layout>
   );
