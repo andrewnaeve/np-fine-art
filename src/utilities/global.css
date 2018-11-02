@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Abel';
+  src: url('../fonts/Abel-Regular.ttf') format('truetype');
+}
+
+html {
+  height: 100%;
+  font-family: 'Abel', Arial, sans-serif;
+}
