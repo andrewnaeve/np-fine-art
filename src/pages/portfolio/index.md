@@ -47,6 +47,7 @@ portfolio:
     image: /img/taupe.jpg
     title: Jo Anne's Bouquet
   - description: '36" x 36", oil on canvas'
+    image: /img/flowers.jpg
     title: Zorro's Bouquet
 ---
 
