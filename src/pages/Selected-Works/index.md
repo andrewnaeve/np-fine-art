@@ -1,8 +1,5 @@
 ---
-templateKey: 'selected-works'
-path: /selected-works
-title: Our Coffee
-heading: What we offer
+templateKey: product-page
 portfolio:
   - description: '9" x 12", oil on linen'
     image: /img/lanterns.jpg
