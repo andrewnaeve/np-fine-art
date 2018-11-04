@@ -1,5 +1,5 @@
 import CMS from 'netlify-cms';
 
-import ProductPagePreview from './preview-templates/ProductPagePreview';
+import SelectedWorksPreview from './preview-templates/SelectedWorksPreview';
 
-CMS.registerPreviewTemplate('broductz', ProductPagePreview);
+CMS.registerPreviewTemplate('broductz', SelectedWorksPreview);

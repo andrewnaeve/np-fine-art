@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layouts';
 
-export const ProductPageTemplate = ({ image, title, description }) => (
+export const SelectedWorksTemplate = ({ image, title, description }) => (
   <section className="section section--gradient">
     <div className="container">
       <div className="section">
@@ -35,43 +35,38 @@ export const ProductPageTemplate = ({ image, title, description }) => (
   </section>
 );
 
-ProductPageTemplate.propTypes = {
-  description: PropTypes.string,
-  title: PropTypes.string,
-  image: PropTypes.string
-};
-
-const ProductPage = ({ data }) => {
-  const {
-    frontmatter: { portfolio }
-  } = data.markdownRemark;
+const SelectedWorks = ({ data }) => {
+  console.log('data', data);
   return (
     <Layout>
-      {portfolio.map(({ title, description, image }) => (
-        <ProductPageTemplate key={title} image={image} title={title} description={description} />
-      ))}
+      {/* {portfolio.map(({ title, description, image }) => (
+        <SelectedWorksTemplate key={title} image={image} title={title} description={description} />
+      ))} */}
     </Layout>
   );
 };
 
-ProductPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
-    })
-  })
-};
+export default SelectedWorks;
 
-export default ProductPage;
-
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        portfolio {
-          title
-          description
-          image
+export const SelectedWorksQuery = graphql`
+  query PortfolioQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            portfolio {
+              description
+              title
+              image {
+                id
+                childImageSharp {
+                  fluid(maxWidth: 1200) {
+                    src
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

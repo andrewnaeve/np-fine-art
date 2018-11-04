@@ -1,6 +1,6 @@
 ---
-templateKey: 'product-page'
-path: /portfolio
+templateKey: 'selected-works'
+path: /selected-works
 title: Our Coffee
 heading: What we offer
 portfolio:
