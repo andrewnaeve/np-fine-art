@@ -33,23 +33,24 @@ const Navbar = () => (
 );
 
 const NavContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #a9a9a9;
-  /* width: 90%; */
-  box-shadow: 0 6px 6px -6px rgba(184, 184, 184, 0.5);
-  /* padding-bottom: 20px; */
-  /* margin: 0 5% 10px 5%; */
-  ${media.smallPhones`
+  grid-area: navbar;
+  ${media.xs`
 		display: none;`};
-  ${media.tablets`
+  ${media.m`
 		display: flex;`};
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #a9a9a9;
+  width: 90%;
+  box-shadow: 0 6px 6px -6px rgba(184, 184, 184, 0.5);
 `;
 
 const NavList = styled.ul`
   display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 `;
 
 const Item = styled.li`
@@ -57,25 +58,13 @@ const Item = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  font-size: 20px;
+  font-size: 30px;
   margin: 0px 15px 0px 15px;
   color: #a9a9a9;
   text-decoration: none;
   &:hover {
     color: #747d7d;
   }
-  ${media.smallPhones`
-	font-size: 18px;
-	`};
-  ${media.largePhones`
-	font-size: 20px;
-	`};
-  ${media.tablets`
-	font-size: 35px;
-	`};
-  ${media.fourKay`
-	font-size: 45px;
-	`};
 `;
 
 export default Navbar;

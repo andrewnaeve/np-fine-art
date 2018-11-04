@@ -1,32 +1,32 @@
 import { css } from 'styled-components';
 
 export const media = {
-  smallPhones: (...args) => css`
+  xs: (...args) => css`
     @media (min-width: 320px) {
       ${css(...args)};
     }
   `,
-  largePhones: (...args) => css`
+  s: (...args) => css`
     @media (min-width: 400px) {
       ${css(...args)};
     }
   `,
-  tablets: (...args) => css`
+  m: (...args) => css`
     @media (min-width: 768px) {
       ${css(...args)};
     }
   `,
-  laptop: (...args) => css`
+  l: (...args) => css`
     @media (min-width: 1024px) {
       ${css(...args)};
     }
   `,
-  desktop: (...args) => css`
+  xl: (...args) => css`
     @media (min-width: 1440px) {
       ${css(...args)};
     }
   `,
-  fourKay: (...args) => css`
+  xxl: (...args) => css`
     @media (min-width: 2560px) {
       ${css(...args)};
     }
