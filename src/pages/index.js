@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../components/layouts';
+import Layout from '../layouts';
 import LandingImage from '../components/home/LandingImage';
 import './global.css';
 

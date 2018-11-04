@@ -1,5 +1,5 @@
 ---
-templateKey: product-page
+templateKey: selected-works
 portfolio:
   - description: '9" x 12", oil on linen'
     image: /img/lanterns.jpg
