@@ -34,10 +34,5 @@ collections:
         label: 'Biography'
         name: 'biography'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'selected-works',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'biography' }
           - { label: Biography, name: biography, widget: markdown }
