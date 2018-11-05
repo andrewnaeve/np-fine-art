@@ -9,15 +9,15 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'src/pages/portfolio/index.md'
-        label: 'Portfolio`'
-        name: 'portfolio'
+      - file: 'src/pages/Selected-Works/index.md'
+        label: 'Selected Works`'
+        name: 'selected-works'
         fields:
           - {
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
-              default: 'product-page',
+              default: 'selected-works',
             }
           - {
               label: Portfolio,
