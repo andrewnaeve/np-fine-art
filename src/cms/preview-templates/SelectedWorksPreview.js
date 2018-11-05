@@ -1,19 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SelectedWorksTemplate } from '../../templates/selected-works';
 
-const SelectedWorksPreview = ({ entry, getAsset }) => {
-  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
+import PortfolioImage from '../../components/selected-works/PortfolioImage';
 
-  const entryTestimonials = entry.getIn(['data', 'testimonials']);
-  const testimonials = entryTestimonials ? entryTestimonials.toJS() : [];
-
-  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans']);
-  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : [];
+const SelectedWorksPreview = data => {
+  console.log('cms data', data);
+  const { entry } = data;
 
   return (
-    <SelectedWorksTemplate
+    <PortfolioImage
       image={entry.getIn(['data', 'image'])}
       title={entry.getIn(['data', 'title'])}
       description={entry.getIn(['data', 'description'])}
