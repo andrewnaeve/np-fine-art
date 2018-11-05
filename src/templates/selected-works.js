@@ -4,7 +4,7 @@ import Layout from '../layouts';
 import styled from 'styled-components';
 import PortfolioImage from '../components/selected-works/PortfolioImage';
 
-const SelectedWorks = ({ data }) => {
+export default ({ data }) => {
   const portfolio = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter.portfolio[0]);
   return (
     <Layout>
@@ -23,8 +23,6 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-
-export default SelectedWorks;
 
 export const SelectedWorksQuery = graphql`
   query PortfolioQuery {

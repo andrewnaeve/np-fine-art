@@ -30,3 +30,14 @@ collections:
                   { label: 'Image', name: image, widget: image },
                 ],
             }
+      - file: 'src/pages/Biography/index.md'
+        label: 'Biography'
+        name: 'biography'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'selected-works',
+            }
+          - { label: Biography, name: biography, widget: text }
