@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import PortfolioImage from '../components/selected-works/PortfolioImage';
 
 export default ({ data }) => {
-  const portfolio = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter.portfolio[0]);
+  const [portfolio] = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter.portfolio);
   return (
     <Layout>
       <Container>

@@ -10,7 +10,7 @@ collections:
     label: 'Pages'
     files:
       - file: 'src/pages/Selected-Works/index.md'
-        label: 'Selected Works`'
+        label: 'Selected Works'
         name: 'selected-works'
         fields:
           - {
@@ -40,4 +40,4 @@ collections:
               widget: 'hidden',
               default: 'selected-works',
             }
-          - { label: Biography, name: biography, widget: text }
+          - { label: Biography, name: biography, widget: markdown }

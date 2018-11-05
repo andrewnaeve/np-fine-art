@@ -1,3 +1,3 @@
 ---
-templateKey: selected-works
+templateKey: biography
 ---
