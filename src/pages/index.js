@@ -4,7 +4,7 @@ import Layout from '../layouts';
 import LandingImage from '../components/home/LandingImage';
 import './global.css';
 
-const IndexPage = () => {
+export default () => {
   return (
     <Layout>
       <Section>
@@ -21,5 +21,3 @@ const Section = styled.section`
   align-items: center;
   justify-content: flex-start;
 `;
-
-export default IndexPage;

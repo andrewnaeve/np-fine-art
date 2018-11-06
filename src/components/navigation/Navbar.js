@@ -9,22 +9,22 @@ const Navbar = () => (
   <NavContainer>
     <NavList>
       <Item>
-        <StyledLink to="/Selected-Works" activeStyle={{ color }}>
+        <StyledLink to="/selected-work" activeStyle={{ color }}>
           Selected Works
         </StyledLink>
       </Item>
       <Item>
-        <StyledLink to="/Biography" activeStyle={{ color }}>
+        <StyledLink to="/biography" activeStyle={{ color }}>
           Biography
         </StyledLink>
       </Item>
       <Item>
-        <StyledLink to="/CV" activeStyle={{ color }}>
+        <StyledLink to="/cv" activeStyle={{ color }}>
           CV
         </StyledLink>
       </Item>
       <Item>
-        <StyledLink to="/Contact" activeStyle={{ color }}>
+        <StyledLink to="/contact" activeStyle={{ color }}>
           Contact
         </StyledLink>
       </Item>

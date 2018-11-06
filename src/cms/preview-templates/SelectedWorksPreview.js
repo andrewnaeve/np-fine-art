@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import PortfolioImage from '../../components/selected-works/PortfolioImage';
+import PortfolioImage from '../../components/selected-work/PortfolioImage';
 
 const SelectedWorksPreview = data => {
-  console.log('cms data', data);
   const { entry } = data;
-
+  console.log('haha', entry.getIn(['data', 'title']));
   return (
     <PortfolioImage
       image={entry.getIn(['data', 'image'])}

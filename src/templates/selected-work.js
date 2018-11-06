@@ -2,12 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts';
 import styled from 'styled-components';
-import PortfolioImage from '../components/selected-works/PortfolioImage';
+import PortfolioImage from '../components/selected-work/PortfolioImage';
 
 export default ({ data }) => {
   const [portfolio] = data.allMarkdownRemark.edges
     .map(edge => edge.node.frontmatter.portfolio)
-    .filter(exists => exists);
+    .filter(e => e);
+  console.log('port', portfolio);
+  // .filter(exists => exists);
   return (
     <Layout>
       <Container>

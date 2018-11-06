@@ -9,15 +9,15 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'src/pages/Selected-Works/index.md'
-        label: 'Selected Works'
-        name: 'selected-works'
+      - file: 'src/pages/selected-work/index.md'
+        label: 'Selected Work'
+        name: 'selected-work'
         fields:
           - {
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
-              default: 'selected-works',
+              default: 'selected-work',
             }
           - {
               label: Portfolio,
@@ -30,9 +30,9 @@ collections:
                   { label: 'Image', name: image, widget: image },
                 ],
             }
-      - file: 'src/pages/Biography/index.md'
+      - file: 'src/pages/biography/index.md'
         label: 'Biography'
         name: 'biography'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'biography' }
-          - { label: Biography, name: biography, widget: markdown }
+          - { label: Body, name: body, widget: markdown }
