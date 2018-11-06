@@ -3,12 +3,19 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../layouts';
 
-export default props => {
-  console.log('praz', props);
-  return <Layout>p</Layout>;
+export default ({
+  data: {
+    markdownRemark: { html }
+  }
+}) => {
+  return (
+    <Layout>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+    </Layout>
+  );
 };
 
-export const biographyPageQuery = graphql`
+export const pageQuery = graphql`
   query BiographyPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html

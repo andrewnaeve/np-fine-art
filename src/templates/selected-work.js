@@ -4,12 +4,13 @@ import Layout from '../layouts';
 import styled from 'styled-components';
 import PortfolioImage from '../components/selected-work/PortfolioImage';
 
-export default ({ data }) => {
-  const [portfolio] = data.allMarkdownRemark.edges
-    .map(edge => edge.node.frontmatter.portfolio)
-    .filter(e => e);
-  console.log('port', portfolio);
-  // .filter(exists => exists);
+export default ({
+  data: {
+    markdownRemark: {
+      frontmatter: { portfolio }
+    }
+  }
+}) => {
   return (
     <Layout>
       <Container>
@@ -28,22 +29,18 @@ const Container = styled.div`
   align-items: center;
 `;
 
-export const SelectedWorksQuery = graphql`
-  query PortfolioQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            portfolio {
-              description
-              title
-              image {
-                id
-                childImageSharp {
-                  fluid(maxWidth: 900) {
-                    ...GatsbyImageSharpFluid_withWebp_noBase64
-                  }
-                }
+export const pageQuery = graphql`
+  query PortfolioPage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        portfolio {
+          description
+          title
+          image {
+            id
+            childImageSharp {
+              fluid(maxWidth: 900) {
+                ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
