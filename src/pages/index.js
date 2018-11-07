@@ -23,12 +23,14 @@ const Section = styled.section`
   justify-content: flex-start;
 `;
 
-export const pageQuery = graphql`
-  query indexQuery($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        portfolio
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query indexQuery($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+//       frontmatter {
+//         landingImage {
+//           id
+//         }
+//       }
+//     }
+//   }
+// `;

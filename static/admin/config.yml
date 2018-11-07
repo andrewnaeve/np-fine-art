@@ -9,12 +9,12 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'src/pages/index.js'
+      - file: 'src/pages/landing/index.md'
         label: 'Landing Image'
-        name: 'landingImage'
+        name: 'landing-image'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden' }
-          - { label: Landing Image, name: landingImage, widget: image }
+          - { label: Landing Image, name: landing-image, widget: image }
       - file: 'src/pages/selected-work/index.md'
         label: 'Selected Work'
         name: 'selected-work'
