@@ -27,8 +27,12 @@ const Section = styled.section`
 //   query indexQuery($id: String!) {
 //     markdownRemark(id: { eq: $id }) {
 //       frontmatter {
-//         landingImage {
-//           id
+//         landing-mage {
+// childImageSharp {
+//   fluid(maxWidth: 700) {
+//     ...GatsbyImageSharpFluid_withWebp_noBase64
+//   }
+// }
 //         }
 //       }
 //     }
