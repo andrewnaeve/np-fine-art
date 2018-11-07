@@ -4,8 +4,7 @@ import Layout from '../layouts';
 import LandingImage from '../components/home/LandingImage';
 import './global.css';
 
-export default props => {
-  console.log('p', props);
+export default () => {
   return (
     <Layout>
       <Section>
