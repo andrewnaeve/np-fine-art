@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import AnimatedContainer from '../animation/AnimatedContainer';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 export default () => (
   <StaticQuery
     query={graphql`
-      query LandingImagecQuery {
+      query LandingImageQuery {
         landingImage: file(relativePath: { eq: "lavendar.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 700) {
@@ -17,9 +18,15 @@ export default () => (
       }
     `}
     render={({ landingImage: { childImageSharp: { fluid = {} } = {} } = {} }) => (
-      <ImageWrapper>
-        <StyledImage fluid={fluid} />
-      </ImageWrapper>
+      <AnimatedContainer>
+        {({ handleLoad, animatePosition }) =>
+          animatePosition(
+            <ImageWrapper>
+              <StyledImage fluid={fluid} onLoad={() => handleLoad()} />
+            </ImageWrapper>
+          )
+        }
+      </AnimatedContainer>
     )}
   />
 );
@@ -28,7 +35,8 @@ const ImageWrapper = styled.div`
   position: relative;
   align-items: flex-start;
   max-width: 750px;
-  width: 90%;
+  width: 100%;
+  margin-top: 10px;
 `;
 
 const StyledImage = styled(Img)`

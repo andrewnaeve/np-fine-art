@@ -24,6 +24,7 @@ const Container = styled.div`
   grid-template-columns: 100%;
   min-height: 100vh;
   grid-gap: 10px;
+  padding: 0px 2%;
 `;
 
 const Body = styled.div`

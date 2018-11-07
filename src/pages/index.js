@@ -4,7 +4,8 @@ import Layout from '../layouts';
 import LandingImage from '../components/home/LandingImage';
 import './global.css';
 
-export default () => {
+export default props => {
+  console.log('p', props);
   return (
     <Layout>
       <Section>
@@ -16,8 +17,18 @@ export default () => {
 
 const Section = styled.section`
   display: flex;
-  flex: 1;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+`;
+
+export const pageQuery = graphql`
+  query indexQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        portfolio
+      }
+    }
+  }
 `;

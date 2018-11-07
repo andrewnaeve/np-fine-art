@@ -46,7 +46,6 @@ class AnimatedContainer extends Component {
 
   _animatePosition = component => {
     const { loaded } = this.state;
-
     const dynamicStyle = {
       position: loaded ? -10 : 0
     };
@@ -78,6 +77,7 @@ export default AnimatedContainer;
 
 const AnimatedDiv = styled.div`
   display: flex;
-  flex: 1;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 `;

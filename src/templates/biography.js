@@ -15,11 +15,13 @@ export default ({
   return (
     <Layout>
       <Container>
-        <AnimatedContainer>
-          {({ handleLoad, renderAnimation }) =>
-            renderAnimation(<YoutubePlayer handleLoad={handleLoad} />)
-          }
-        </AnimatedContainer>
+        <Wrapper>
+          <AnimatedContainer>
+            {({ handleLoad, renderAnimation }) =>
+              renderAnimation(<YoutubePlayer handleLoad={handleLoad} />)
+            }
+          </AnimatedContainer>
+        </Wrapper>
         <AnimatedContainer>
           {({ handleLoad, renderAnimation }) =>
             renderAnimation(<About html={html} handleLoad={handleLoad} />)
@@ -32,14 +34,17 @@ export default ({
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  align-items: center;
   flex-direction: column;
-  max-width: 90%;
-  margin-top: 30px;
+  width: 100%;
+`;
+
+const Wrapper = styled.div`
+  width: 98%;
   ${media.m`
-		max-width: 70%;
-		margin-top: 20px;
-	`};
+    max-width: 900px;
+`};
 `;
 
 export const pageQuery = graphql`

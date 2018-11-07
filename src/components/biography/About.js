@@ -10,7 +10,6 @@ class About extends Component {
   }
   render() {
     const { html } = this.props;
-    console.log(html);
     return <Text dangerouslySetInnerHTML={{ __html: html }} />;
   }
 }
@@ -23,7 +22,7 @@ const Text = styled.div`
   justify-content: center;
   margin-bottom: 20px;
   ${media.xs`
-		font-size: 1.35rem;
+		font-size: 1.2rem;
 	`};
   ${media.m`
 		font-size: 1.6rem;
