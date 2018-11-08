@@ -4,13 +4,13 @@ import Img from 'gatsby-image';
 
 export default ({ fluid }) => (
   <ImageWrapper>
-    <Img fluid={fluid} />
+    <StyledImage fluid={fluid} />
   </ImageWrapper>
 );
 
 const ImageWrapper = styled.div`
-  align-items: flex-start;
-  max-width: 300px;
+  max-width: 90%;
+  width: 300px;
 `;
 
 const StyledImage = styled(Img)`

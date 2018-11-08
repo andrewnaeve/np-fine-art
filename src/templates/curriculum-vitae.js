@@ -5,23 +5,21 @@ import Layout from '../layouts';
 import AnimatedContainer from '../components/animation/AnimatedContainer';
 import { media } from '../utilities/style-utils';
 import NancyPlank from '../components/curriculum-vitae/NancyPlank';
-import Section from '../components/curriculum-vitae/Section';
+import Publications from '../components/curriculum-vitae/Publications';
+import Shows from '../components/curriculum-vitae/Shows';
+import Education from '../components/curriculum-vitae/Education';
 
 export default ({
-  data,
   data: {
-    markdownRemark: { html, frontmatter }
+    markdownRemark: { frontmatter }
   }
 }) => {
   const {
     profilePicture: {
       childImageSharp: { fluid }
-    },
-    education,
-    publications,
-    shows
+    }
   } = frontmatter;
-  console.log(data);
+
   return (
     <Layout>
       <Container>
@@ -29,9 +27,12 @@ export default ({
           <NancyPlank fluid={fluid} />
         </Row>
         <LeftColumn>
-          <Section markup={publications} />
+          <Publications />
+          <Shows />
         </LeftColumn>
-        <RightColumn>right</RightColumn>
+        <RightColumn>
+          <Education />
+        </RightColumn>
       </Container>
     </Layout>
   );
@@ -50,7 +51,12 @@ const Container = styled.div`
 `;
 
 const Row = styled.div`
+  display: flex;
   grid-area: row;
+  align-items: center;
+  justify-content: center;
+  ${media.m`
+    justify-content: flex-start;`};
 `;
 
 const LeftColumn = styled.div`
@@ -63,7 +69,6 @@ const RightColumn = styled.div`
 export const pageQuery = graphql`
   query CvPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
-      html
       frontmatter {
         profilePicture {
           id
@@ -73,8 +78,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        education
-        shows
       }
     }
   }
