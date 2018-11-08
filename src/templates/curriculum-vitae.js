@@ -9,7 +9,7 @@ import Section from '../components/curriculum-vitae/Section';
 
 export default ({
   data: {
-    markdownRemark: { frontmatter }
+    markdownRemark: { html, frontmatter }
   }
 }) => {
   const {
@@ -20,7 +20,8 @@ export default ({
     publications,
     shows
   } = frontmatter;
-  console.log(publications);
+  console.log('mr', html);
+
   return (
     <Layout>
       <Container>
@@ -62,6 +63,7 @@ const RightColumn = styled.div`
 export const pageQuery = graphql`
   query CvPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         profilePicture {
           id
