@@ -43,7 +43,7 @@ const Container = styled.div`
   grid-template-areas:
     'row row'
     'leftColumn rightColumn';
-  grid-template-rows: 300px 1fr;
+  grid-template-rows: 320px 1fr;
   grid-template-columns: 1fr 1fr;
   max-height: 100%;
   grid-gap: 10px;

@@ -11,6 +11,7 @@ export default ({ fluid }) => (
 const ImageWrapper = styled.div`
   max-width: 90%;
   width: 300px;
+  margin-bottom: 20px;
 `;
 
 const StyledImage = styled(Img)`
