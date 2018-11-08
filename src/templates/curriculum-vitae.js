@@ -20,6 +20,7 @@ export default ({
     publications,
     shows
   } = frontmatter;
+  console.log(frontmatter);
   console.log('mr', html);
 
   return (
@@ -73,7 +74,6 @@ export const pageQuery = graphql`
             }
           }
         }
-
         education
         shows
       }

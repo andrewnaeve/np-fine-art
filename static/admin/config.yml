@@ -39,7 +39,6 @@ collections:
       - file: 'src/pages/curriculum-vitae/index.md'
         label: 'Curriculum Vitae'
         name: 'curriculum-vitae'
-        format: 'frontmatter'
         fields:
           - {
               label: 'Template Key',
@@ -49,5 +48,5 @@ collections:
             }
           - { label: Profile Picture, name: profilePicture, widget: image }
           - { label: Body, name: body, widget: markdown }
-          - { label: Education, name: education, widget: markdown }
+          - { label: Education, name: body, widget: markdown }
           - { label: Shows, name: shows, widget: markdown }
