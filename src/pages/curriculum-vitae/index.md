@@ -1,5 +1,6 @@
 ---
 templateKey: curriculum-vitae
+profile-picture: /img/nancyplank.jpg
 publications: |-
   # Publications
 
