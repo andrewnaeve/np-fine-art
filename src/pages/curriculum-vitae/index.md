@@ -1,34 +1,6 @@
 ---
 templateKey: curriculum-vitae
 profilePicture: /img/nancyplank.jpg
-publications: |-
-  # Publications
-
-  **50 to Watch**, 2016
-
-  National Publication
-
-  The Studio Door
-
-  San Diego, CA
-
-  </br>
-
-  **50 to Watch**, 2015
-
-  National Publication
-
-  The Studio Door
-
-  San Diego, CA
-
-  </br>
-
-  **Ray Street Artists**, 2013
-
-  San Diego Art Department
-
-  San Diego, CA
 education: >-
   # Education
 
@@ -321,4 +293,30 @@ shows: >-
 
   San Diego, CA
 ---
+# Publications
 
+  **50 to Watch**, 2016
+
+  National Publication
+
+  The Studio Door
+
+  San Diego, CA
+
+  </br>
+
+**  50 to Watch**, 2015
+
+  National Publication
+
+  The Studio Door
+
+  San Diego, CA
+
+  </br>
+
+  **Ray Street Artists**, 2013
+
+  San Diego Art Department
+
+  San Diego, CA
