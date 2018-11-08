@@ -1,6 +1,6 @@
 ---
 templateKey: curriculum-vitae
-profile-picture: /img/nancyplank.jpg
+profilePicture: /img/nancyplank.jpg
 publications: |-
   # Publications
 
@@ -321,4 +321,3 @@ shows: >-
 
   San Diego, CA
 ---
-
