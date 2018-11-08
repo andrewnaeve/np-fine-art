@@ -2,7 +2,7 @@
 templateKey: curriculum-vitae
 profilePicture: /img/nancyplank.jpg
 publications: |-
-  # Publications 
+  # Publications
 
   **50 to Watch**, 2016
 
