@@ -19,7 +19,7 @@ const Navbar = () => (
         </StyledLink>
       </Item>
       <Item>
-        <StyledLink to="/cv" activeStyle={{ color }}>
+        <StyledLink to="/curriculum-vitae" activeStyle={{ color }}>
           CV
         </StyledLink>
       </Item>
