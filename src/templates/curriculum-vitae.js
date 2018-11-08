@@ -73,7 +73,7 @@ export const pageQuery = graphql`
             }
           }
         }
-        publications
+
         education
         shows
       }

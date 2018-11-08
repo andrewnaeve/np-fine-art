@@ -39,6 +39,7 @@ collections:
       - file: 'src/pages/curriculum-vitae/index.md'
         label: 'Curriculum Vitae'
         name: 'curriculum-vitae'
+        format: 'frontmatter'
         fields:
           - {
               label: 'Template Key',
