@@ -295,28 +295,28 @@ shows: >-
 ---
 # Publications
 
-  **50 to Watch**, 2016
+**50 to Watch**, 2016
 
-  National Publication
+National Publication
 
-  The Studio Door
+The Studio Door
 
-  San Diego, CA
+San Diego, CA
 
-  </br>
+</br>
 
-**  50 to Watch**, 2015
+**50 to Watch**, 2015
 
-  National Publication
+National Publication
 
-  The Studio Door
+The Studio Door
 
-  San Diego, CA
+San Diego, CA
 
-  </br>
+</br>
 
-  **Ray Street Artists**, 2013
+**Ray Street Artists**, 2013
 
-  San Diego Art Department
+San Diego Art Department
 
-  San Diego, CA
+San Diego, CA
