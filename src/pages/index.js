@@ -21,19 +21,3 @@ const Section = styled.section`
   align-items: center;
   justify-content: flex-start;
 `;
-
-// export const pageQuery = graphql`
-//   query indexQuery($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       frontmatter {
-//         landing-mage {
-// childImageSharp {
-//   fluid(maxWidth: 700) {
-//     ...GatsbyImageSharpFluid_withWebp_noBase64
-//   }
-// }
-//         }
-//       }
-//     }
-//   }
-// `;

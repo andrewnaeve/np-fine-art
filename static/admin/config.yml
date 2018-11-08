@@ -41,6 +41,7 @@ collections:
         name: 'curriculum-vitae'
         fields:
           - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'biography' }
+          - { label: Profile Picture, name: profile-picture, widget: image }
           - { label: Publications, name: publications, widget: markdown }
           - { label: Education, name: education, widget: markdown }
           - { label: Shows, name: shows, widget: markdown }

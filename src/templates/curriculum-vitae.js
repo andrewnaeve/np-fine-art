@@ -5,6 +5,20 @@ import Layout from '../layouts';
 import AnimatedContainer from '../components/animation/AnimatedContainer';
 import { media } from '../utilities/style-utils';
 
-export default () => <Layout />;
+export default () => (
+  <Layout>
+    <Container>hi</Container>
+  </Layout>
+);
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: grid;
+  grid-template-areas:
+    'row'
+    'left-column'
+    'right-column'
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  max-height: 100%;
+  grid-gap: 10px;
+`;
