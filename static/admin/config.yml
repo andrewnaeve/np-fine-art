@@ -48,5 +48,3 @@ collections:
             }
           - { label: Profile Picture, name: profilePicture, widget: image }
           - { label: Body, name: body, widget: markdown }
-          - { label: Education, name: body, widget: markdown }
-          - { label: Shows, name: shows, widget: markdown }

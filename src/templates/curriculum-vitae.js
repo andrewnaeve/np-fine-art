@@ -8,6 +8,7 @@ import NancyPlank from '../components/curriculum-vitae/NancyPlank';
 import Section from '../components/curriculum-vitae/Section';
 
 export default ({
+  data,
   data: {
     markdownRemark: { html, frontmatter }
   }
@@ -20,9 +21,7 @@ export default ({
     publications,
     shows
   } = frontmatter;
-  console.log(frontmatter);
-  console.log('mr', html);
-
+  console.log(data);
   return (
     <Layout>
       <Container>
