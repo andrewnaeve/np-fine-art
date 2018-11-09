@@ -22,20 +22,14 @@ export default () => (
         childImageSharp: { fluid }
       }
     }) => (
-      <AnimatedContainer>
-        {({ handleLoad, animatePosition }) =>
-          animatePosition(
-            <ImageWrapper>
-              <StyledImage
-                fluid={fluid}
-                onLoad={() => {
-                  handleLoad();
-                }}
-              />
-            </ImageWrapper>
-          )
-        }
-      </AnimatedContainer>
+      <ImageWrapper>
+        <StyledImage
+          fluid={fluid}
+          onLoad={() => {
+            handleLoad();
+          }}
+        />
+      </ImageWrapper>
     )}
   />
 );
