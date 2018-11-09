@@ -17,7 +17,11 @@ export default () => (
         }
       }
     `}
-    render={({ landingImage: { childImageSharp: { fluid = {} } = {} } = {} }) => (
+    render={({
+      landingImage: {
+        childImageSharp: { fluid }
+      }
+    }) => (
       <AnimatedContainer>
         {({ handleLoad, animatePosition }) =>
           animatePosition(
@@ -25,7 +29,6 @@ export default () => (
               <StyledImage
                 fluid={fluid}
                 onLoad={() => {
-                  console.log('loaded');
                   handleLoad();
                 }}
               />

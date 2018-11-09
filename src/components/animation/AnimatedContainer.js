@@ -49,7 +49,7 @@ class AnimatedContainer extends Component {
     const dynamicStyle = {
       position: loaded ? -10 : 0
     };
-
+    console.log('made it here');
     return (
       <Spring to={dynamicStyle} config={{ easing: config.gentle }}>
         {({ position }) => (
