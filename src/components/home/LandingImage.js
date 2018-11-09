@@ -22,7 +22,13 @@ export default () => (
         {({ handleLoad, animatePosition }) =>
           animatePosition(
             <ImageWrapper>
-              <StyledImage fluid={fluid} onLoad={() => handleLoad()} />
+              <StyledImage
+                fluid={fluid}
+                onLoad={() => {
+                  console.log('loaded');
+                  handleLoad();
+                }}
+              />
             </ImageWrapper>
           )
         }
