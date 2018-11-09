@@ -12,7 +12,10 @@ const Container = styled.footer`
   display: flex;
   justify-content: center;
   grid-area: footer;
-  margin-bottom: 10px;
+  margin-bottom: 70px;
+  ${media.m`
+    margin-bottom: 10px;
+  `};
 `;
 
 const Copyright = styled.div`

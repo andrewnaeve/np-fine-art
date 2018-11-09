@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Navbar from '../components/navigation/Navbar';
 import styled from 'styled-components';
+import MobileNav from '../components/navigation/MobileNav';
 
 export default ({ children }) => (
   <Container>
@@ -10,6 +11,7 @@ export default ({ children }) => (
     <Navbar />
     <Body>{children}</Body>
     <Footer />
+    <MobileNav />
   </Container>
 );
 
