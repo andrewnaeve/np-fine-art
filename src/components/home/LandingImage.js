@@ -25,9 +25,6 @@ export default () => (
       <ImageWrapper>
         <StyledImage
           fluid={fluid}
-          onLoad={() => {
-            handleLoad();
-          }}
         />
       </ImageWrapper>
     )}
