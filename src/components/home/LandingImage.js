@@ -1,34 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 import AnimatedContainer from '../animation/AnimatedContainer';
-import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query LandingImageQuery {
-        landingImage: file(relativePath: { eq: "lavendar.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid_withWebp_noBase64
-            }
-          }
-        }
-      }
-    `}
-    render={({
-      landingImage: {
-        childImageSharp: { fluid }
-      }
-    }) => (
-      <ImageWrapper>
-        <StyledImage
-          fluid={fluid}
-        />
-      </ImageWrapper>
-    )}
-  />
+export default ({ fluid }) => (
+  <AnimatedContainer>
+    {({ handleLoad, animatePosition }) =>
+      animatePosition(
+        <ImageWrapper>
+          <StyledImage
+            fluid={fluid}
+            onLoad={() => {
+              handleLoad();
+            }}
+          />
+        </ImageWrapper>
+      )
+    }
+  </AnimatedContainer>
 );
 
 const ImageWrapper = styled.div`

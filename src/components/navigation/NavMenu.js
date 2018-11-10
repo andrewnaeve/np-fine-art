@@ -20,7 +20,7 @@ export const Menu = props => (
         opacity: props.interpolatingStyle.y
       }}
     >
-      <QuickLink to="/" exact onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
+      <QuickLink to="/" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         Home
       </QuickLink>
       <QuickLink
