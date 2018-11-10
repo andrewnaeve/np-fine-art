@@ -22,11 +22,7 @@ export default ({
             }
           </AnimatedContainer>
         </Wrapper>
-        <AnimatedContainer>
-          {({ handleLoad, renderAnimation }) =>
-            renderAnimation(<About html={html} handleLoad={handleLoad} />)
-          }
-        </AnimatedContainer>
+        <About html={html} />
       </Container>
     </Layout>
   );

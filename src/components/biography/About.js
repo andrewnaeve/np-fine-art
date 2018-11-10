@@ -2,18 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
 
-class About extends Component {
-  componentDidMount() {
-    const { handleLoad } = this.props;
-    handleLoad();
-  }
-  render() {
-    const { html } = this.props;
-    return <Text dangerouslySetInnerHTML={{ __html: html }} />;
-  }
-}
-
-export default About;
+export default ({ html }) => <Text dangerouslySetInnerHTML={{ __html: html }} />;
 
 const Text = styled.div`
   margin-top: 20px;
