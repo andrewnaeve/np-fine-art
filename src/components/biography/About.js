@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
 

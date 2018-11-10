@@ -7,11 +7,10 @@ const netlifyCmsPaths = {
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter'
+    title: 'Nancy Plank'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -84,6 +83,12 @@ module.exports = {
           yandex: false,
           windows: false
         }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
       }
     },
     {
