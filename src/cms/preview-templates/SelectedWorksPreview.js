@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import PortfolioImage from '../../components/selected-work/PortfolioImage';
+import PortfolioImage from '../../components/select-work/PortfolioImage';
 
 const SelectedWorksPreview = data => {
   const { entry } = data;

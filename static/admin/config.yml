@@ -9,16 +9,11 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: 'src/pages/selected-work/index.md'
+      - file: 'src/pages/select-work/index.md'
         label: 'Selected Work'
         name: 'selected-work'
         fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'selected-work',
-            }
+          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'select-work' }
           - {
               label: Portfolio,
               name: portfolio,

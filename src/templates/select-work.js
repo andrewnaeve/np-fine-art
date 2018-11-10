@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../layouts';
 import styled from 'styled-components';
-import PortfolioImage from '../components/selected-work/PortfolioImage';
+import PortfolioImage from '../components/select-work/PortfolioImage';
 
 export default ({
   data: {

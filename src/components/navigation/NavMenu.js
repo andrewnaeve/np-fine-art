@@ -23,12 +23,8 @@ export const Menu = props => (
       <QuickLink to="/" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         Home
       </QuickLink>
-      <QuickLink
-        to="/selected-work"
-        onClick={props.toggleDrawer}
-        activeStyle={{ color: '#78D5E3' }}
-      >
-        Selected Works
+      <QuickLink to="/select-work" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
+        Select Works
       </QuickLink>
       <QuickLink to="/biography" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         Biography

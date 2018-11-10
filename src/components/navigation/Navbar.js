@@ -9,8 +9,8 @@ const Navbar = () => (
   <NavContainer>
     <NavList>
       <Item>
-        <StyledLink to="/selected-work" activeStyle={{ color }}>
-          Selected Works
+        <StyledLink to="/select-work" activeStyle={{ color }}>
+          Select Works
         </StyledLink>
       </Item>
       <Item>

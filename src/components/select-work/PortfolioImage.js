@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
+import AnimatedContainer from '../animation/AnimatedContainer';
 
 export default ({
   image: {
@@ -10,13 +11,19 @@ export default ({
   title,
   description
 }) => (
-  <Wrapper>
-    <Img fluid={fluid} />
-    <TextContainer>
-      <Title> {title} </Title>
-      <Description> {description} </Description>
-    </TextContainer>
-  </Wrapper>
+  <AnimatedContainer>
+    {({ handleLoad, animatePosition }) =>
+      animatePosition(
+        <Wrapper>
+          <Img fluid={fluid} onLoad={() => handleLoad()} />
+          <TextContainer>
+            <Title> {title} </Title>
+            <Description> {description} </Description>
+          </TextContainer>
+        </Wrapper>
+      )
+    }
+  </AnimatedContainer>
 );
 
 const Wrapper = styled.div`
