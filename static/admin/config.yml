@@ -42,4 +42,3 @@ collections:
               default: 'curriculum-vitae',
             }
           - { label: Profile Picture, name: profilePicture, widget: image }
-          - { label: Body, name: body, widget: markdown }

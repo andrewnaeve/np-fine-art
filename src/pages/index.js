@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Layout from '../layouts';
 import { graphql } from 'gatsby';
 import LandingImage from '../components/home/LandingImage';
-import './global.css';
 
 export default ({
   data: {
