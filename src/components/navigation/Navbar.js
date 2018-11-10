@@ -10,7 +10,7 @@ const Navbar = () => (
     <NavList>
       <Item>
         <StyledLink to="/select-work" activeStyle={{ color }}>
-          Select Works
+          Select Work
         </StyledLink>
       </Item>
       <Item>
