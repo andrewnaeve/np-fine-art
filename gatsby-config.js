@@ -91,6 +91,7 @@ module.exports = {
         // Add any options here
       }
     },
+    'babel-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
