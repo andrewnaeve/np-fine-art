@@ -11,27 +11,33 @@ export default ({
   title,
   description
 }) => (
-  <AnimatedContainer>
-    {({ handleLoad, animatePosition }) =>
-      animatePosition(
-        <Wrapper>
-          <Img fluid={fluid} onLoad={() => handleLoad()} />
-          <TextContainer>
-            <Title> {title} </Title>
-            <Description> {description} </Description>
-          </TextContainer>
-        </Wrapper>
-      )
-    }
-  </AnimatedContainer>
+  <Wrapper>
+    <AnimatedContainer>
+      {({ handleLoad, animatePosition }) =>
+        animatePosition(
+          <InnerWrapper>
+            <Img fluid={fluid} onLoad={() => handleLoad()} />
+            <TextContainer>
+              <Title> {title} </Title>
+              <Description> {description} </Description>
+            </TextContainer>
+          </InnerWrapper>
+        )
+      }
+    </AnimatedContainer>
+  </Wrapper>
 );
 
 const Wrapper = styled.div`
   display: flex;
+  width: 100%;
+`;
+
+const InnerWrapper = styled.div`
+  align-items: center;
+  flex-direction: column;
   max-width: 900px;
   width: 90%;
-  flex-direction: column;
-  justify-content: center;
 `;
 
 const TextContainer = styled.div`
