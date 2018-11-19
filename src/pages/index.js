@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../layouts';
 import { graphql } from 'gatsby';
 import LandingImage from '../components/home/LandingImage';
 
@@ -12,11 +11,9 @@ export default ({
   }
 }) => {
   return (
-    <Layout>
-      <Section>
-        <LandingImage fluid={fluid} />
-      </Section>
-    </Layout>
+    <Section>
+      <LandingImage fluid={fluid} />
+    </Section>
   );
 };
 

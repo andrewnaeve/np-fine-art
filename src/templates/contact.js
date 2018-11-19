@@ -1,28 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from '../layouts';
 import AnimatedContainer from '../components/animation/AnimatedContainer';
 import { Instagram, Email } from '../components/contact/SocialIcons';
 
 export default () => (
-  <Layout>
-    <Container>
-      <Row>
-        <AnimatedContainer>
-          {({ handleLoad, renderAnimation }) =>
-            renderAnimation(<Email title={'Email'} handleLoad={handleLoad} />)
-          }
-        </AnimatedContainer>
-      </Row>
-      <Row>
-        <AnimatedContainer>
-          {({ handleLoad, renderAnimation }) =>
-            renderAnimation(<Instagram title={'Instagram'} handleLoad={handleLoad} />)
-          }
-        </AnimatedContainer>
-      </Row>
-    </Container>
-  </Layout>
+  <Container>
+    <Row>
+      <AnimatedContainer>
+        {({ handleLoad, renderAnimation }) =>
+          renderAnimation(<Email title={'Email'} handleLoad={handleLoad} />)
+        }
+      </AnimatedContainer>
+    </Row>
+    <Row>
+      <AnimatedContainer>
+        {({ handleLoad, renderAnimation }) =>
+          renderAnimation(<Instagram title={'Instagram'} handleLoad={handleLoad} />)
+        }
+      </AnimatedContainer>
+    </Row>
+  </Container>
 );
 
 const Container = styled.div`

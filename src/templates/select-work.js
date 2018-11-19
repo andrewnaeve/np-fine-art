@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../layouts';
 import styled from 'styled-components';
 import PortfolioImage from '../components/select-work/PortfolioImage';
 
@@ -12,13 +11,11 @@ export default ({
   }
 }) => {
   return (
-    <Layout>
-      <Container>
-        {portfolio.map(({ image, title, description }) => (
-          <PortfolioImage key={image.id} image={image} title={title} description={description} />
-        ))}
-      </Container>
-    </Layout>
+    <Container>
+      {portfolio.map(({ image, title, description }) => (
+        <PortfolioImage key={image.id} image={image} title={title} description={description} />
+      ))}
+    </Container>
   );
 };
 

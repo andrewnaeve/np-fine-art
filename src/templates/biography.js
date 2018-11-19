@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Layout from '../layouts';
 import AnimatedContainer from '../components/animation/AnimatedContainer';
 import YoutubePlayer from '../components/biography/YoutubePlayer';
 import About from '../components/biography/About';
@@ -13,18 +12,16 @@ export default ({
   }
 }) => {
   return (
-    <Layout>
-      <Container>
-        <Wrapper>
-          <AnimatedContainer>
-            {({ handleLoad, renderAnimation }) =>
-              renderAnimation(<YoutubePlayer handleLoad={handleLoad} />)
-            }
-          </AnimatedContainer>
-        </Wrapper>
-        <About html={html} />
-      </Container>
-    </Layout>
+    <Container>
+      <Wrapper>
+        <AnimatedContainer>
+          {({ handleLoad, renderAnimation }) =>
+            renderAnimation(<YoutubePlayer handleLoad={handleLoad} />)
+          }
+        </AnimatedContainer>
+      </Wrapper>
+      <About html={html} />
+    </Container>
   );
 };
 

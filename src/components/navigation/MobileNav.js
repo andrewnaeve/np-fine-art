@@ -13,7 +13,7 @@ class MobileNav extends Component {
 
     const isOpen = {
       x: open ? 10 : 290,
-      y: open ? 1 : 0
+      opacity: open ? 1 : 0
     };
 
     return (

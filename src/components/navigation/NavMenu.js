@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { media } from '../../utilities/style-utils';
 
-export const Menu = props => (
+export const Menu = ({ interpolatingStyle: { x, opacity }, toggleDrawer }) => (
   <NavWrapper
     style={{
-      transform: `translate3d(0, ${props.interpolatingStyle.x}px, 0)`
+      transform: `translate3d(0, ${x}px, 0)`
     }}
   >
-    <Hamburger onClick={props.toggleDrawer}>
+    <Hamburger onClick={toggleDrawer}>
       <Patty />
       <Patty />
       <Patty />
@@ -17,26 +17,22 @@ export const Menu = props => (
 
     <LinkWrapper
       style={{
-        opacity: props.interpolatingStyle.y
+        opacity
       }}
     >
-      <QuickLink to="/" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
+      <QuickLink to="/" onClick={toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         Home
       </QuickLink>
-      <QuickLink to="/select-work" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
+      <QuickLink to="/select-work" onClick={toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         Select Works
       </QuickLink>
-      <QuickLink to="/biography" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
+      <QuickLink to="/biography" onClick={toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         Biography
       </QuickLink>
-      <QuickLink
-        to="/curriculum-vitae"
-        onClick={props.toggleDrawer}
-        activeStyle={{ color: '#78D5E3' }}
-      >
+      <QuickLink to="/curriculum-vitae" onClick={toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         CV
       </QuickLink>
-      <QuickLink to="/contact" onClick={props.toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
+      <QuickLink to="/contact" onClick={toggleDrawer} activeStyle={{ color: '#78D5E3' }}>
         Contact
       </QuickLink>
     </LinkWrapper>
