@@ -10,9 +10,6 @@ portfolio:
   - description: '6" x 4", oil on linen'
     image: /img/sail-boats.jpg
     title: Sailboats at Luxembourg
-  - description: '36" x 36", oil on linen'
-    image: /img/boquet.jpg
-    title: The Last Bouquet
   - description: '9" x 12", oil on linen'
     image: /img/flowers-for-lunia.jpg
     title: Flowers for Ron and Vanessa
@@ -30,7 +27,7 @@ portfolio:
     title: 'What, Me Worry?'
   - description: '36" x 48", oil on canvas'
     image: /img/roses-with-black-background.jpg
-    title: Roses in the Spotlight
+    title: Roses at Night
   - description: '48" x 36", oil on canvas'
     image: /img/mennonites.jpg
     title: Mennonite Tourists at Pike's Peak
@@ -52,5 +49,8 @@ portfolio:
   - description: '36" x 36", oil on canvas'
     image: /img/flowers.jpg
     title: Zorro's Bouquet
+  - description: '36" x 36", oil on linen'
+    image: /img/boquet.jpg
+    title: The Last Bouquet
 ---
 
