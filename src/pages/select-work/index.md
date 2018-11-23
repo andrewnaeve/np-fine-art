@@ -1,12 +1,12 @@
 ---
 templateKey: select-work
 portfolio:
-  - description: '9" x 12", oil on linen'
+  - description: '48" x 36", oil on canvas'
     image: /img/lanterns.jpg
     title: Street Lights at LACMA
   - description: '36" x 36", oil on linen'
     image: /img/boquet.jpg
-    title: The Last Boquet
+    title: The Last Bouquet
   - description: '6" x 4", oil on linen'
     image: /img/sail-boats.jpg
     title: Sailboats at Luxembourg
@@ -50,3 +50,4 @@ portfolio:
     image: /img/flowers.jpg
     title: Zorro's Bouquet
 ---
+
