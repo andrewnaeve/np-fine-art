@@ -33,7 +33,7 @@ portfolio:
     title: Mennonite Tourists at Pike's Peak
   - description: '36" x 48", oil on canvas'
     image: /img/vase.jpg
-    title: Tasteful Opulence
+    title: Welcome to the Ritz
   - description: '6" x 4", oil on canvas'
     image: /img/arden-in-rome.jpg
     title: Arden in Rome
