@@ -1,6 +1,9 @@
 ---
 templateKey: select-work
 portfolio:
+  - description: '48" x 36," oil on canvas'
+    image: /img/img_3266.jpg
+    title: Desert Shadows
   - description: '48" x 36", oil on canvas'
     image: /img/lanterns.jpg
     title: Street Lights at LACMA
@@ -12,7 +15,7 @@ portfolio:
     title: Sailboats at Luxembourg
   - description: '9" x 12", oil on linen'
     image: /img/flowers-for-lunia.jpg
-    title: Flowers for Lunia
+    title: Flowers for Ron and Vanessa
   - description: '24" x 20", oil on canvas'
     image: /img/holly-and-sebastian.jpg
     title: Holly and Sebastian
@@ -49,8 +52,5 @@ portfolio:
   - description: '36" x 36", oil on canvas'
     image: /img/flowers.jpg
     title: Zorro's Bouquet
-  - description: '48" x 36," oil on canvas'
-    image: /img/img_3266.jpg
-    title: Desert Shadows
 ---
 
