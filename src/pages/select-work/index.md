@@ -49,5 +49,8 @@ portfolio:
   - description: '36" x 36", oil on canvas'
     image: /img/flowers.jpg
     title: Zorro's Bouquet
+  - description: '48" x 36," oil on canvas'
+    image: /img/img_3266.jpg
+    title: Desert Shadows
 ---
 
