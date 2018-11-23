@@ -7,12 +7,12 @@ portfolio:
   - description: '48" x 36", oil on canvas'
     image: /img/lanterns.jpg
     title: Street Lights at LACMA
-  - description: '36" x 36", oil on linen'
-    image: /img/boquet.jpg
-    title: The Last Bouquet
   - description: '6" x 4", oil on linen'
     image: /img/sail-boats.jpg
     title: Sailboats at Luxembourg
+  - description: '36" x 36", oil on linen'
+    image: /img/boquet.jpg
+    title: The Last Bouquet
   - description: '9" x 12", oil on linen'
     image: /img/flowers-for-lunia.jpg
     title: Flowers for Ron and Vanessa
