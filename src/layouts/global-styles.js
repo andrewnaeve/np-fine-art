@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import Abel from '../fonts/Abel-Regular.woff2';
+import Abel from '../fonts/abel-regular.woff2';
 
 export const GlobalStyle = createGlobalStyle`
   html,
