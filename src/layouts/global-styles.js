@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import Abel from '../fonts/Abel-Regular.ttf';
+import Abel from '../fonts/Abel-Regular.woff2';
 
 export const GlobalStyle = createGlobalStyle`
   html,
@@ -129,7 +129,7 @@ export const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Abel';
-    src: url(${Abel}) format('truetype');
+    src: url(${Abel}) format('woff2');
   }
 
   html,

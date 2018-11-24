@@ -2,11 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
 
-export default () => (
-  <Container>
-    <Copyright>&copy;2017, Nancy Plank. All rights reserved.</Copyright>
-  </Container>
-);
+export default () => {
+  const year = new Date().getFullYear();
+  return (
+    <Container>
+      <Copyright>&copy;{year}, Nancy Plank. All rights reserved.</Copyright>
+    </Container>
+  );
+};
 
 const Container = styled.footer`
   display: flex;
