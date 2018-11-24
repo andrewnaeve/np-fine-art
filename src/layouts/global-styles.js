@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import Abel from '../fonts/abel-regular.woff2';
 
 export const GlobalStyle = createGlobalStyle`
   html,
@@ -125,11 +124,6 @@ export const GlobalStyle = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
-  }
-
-  @font-face {
-    font-family: 'Abel';
-    src: url(${Abel}) format('woff2');
   }
 
   html,

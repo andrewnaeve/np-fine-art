@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import LandingImage from '../components/home/LandingImage';
+import { Helmet } from 'react-helmet';
 
 export default ({
   data: {
@@ -12,6 +13,7 @@ export default ({
 }) => {
   return (
     <Section>
+      <Helmet title={'Nancy Plank'} />
       <LandingImage fluid={fluid} />
     </Section>
   );

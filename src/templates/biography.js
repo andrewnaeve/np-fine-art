@@ -5,6 +5,7 @@ import AnimatedContainer from '../components/animation/AnimatedContainer';
 import YoutubePlayer from '../components/biography/YoutubePlayer';
 import About from '../components/biography/About';
 import { media } from '../utilities/style-utils';
+import { Helmet } from 'react-helmet';
 
 export default ({
   data: {
@@ -13,6 +14,7 @@ export default ({
 }) => {
   return (
     <Container>
+      <Helmet title={'About'} />
       <Wrapper>
         <AnimatedContainer>
           {({ handleLoad, renderAnimation }) =>

@@ -4,10 +4,12 @@ import Footer from './components/Footer';
 import Navbar from '../components/navigation/Navbar';
 import styled from 'styled-components';
 import MobileNav from '../components/navigation/MobileNav';
-import './index.css';
+import { GlobalStyle } from './global-styles';
+import 'typeface-abel';
 
 export default ({ children }) => (
   <Container>
+    <GlobalStyle />
     <Header />
     <Navbar />
     <Body>{children}</Body>

@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import AnimatedContainer from '../components/animation/AnimatedContainer';
 import { Instagram, Email } from '../components/contact/SocialIcons';
+import { Helmet } from 'react-helmet';
 
 export default () => (
   <Container>
+    <Helmet title={'Contact'} />
     <Row>
       <AnimatedContainer>
         {({ handleLoad, renderAnimation }) =>
