@@ -6,7 +6,6 @@ export default ({ html }) => <Text dangerouslySetInnerHTML={{ __html: html }} />
 
 const Text = styled.div`
   margin-top: 20px;
-  font-family: 'Abel', sans-serif;
   justify-content: center;
   margin-bottom: 20px;
   ${media.xs`

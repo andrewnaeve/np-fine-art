@@ -8,7 +8,6 @@ export default () => <Title to="/">Nancy Plank</Title>;
 const Title = styled(Link)`
   display: flex;
   grid-area: header;
-  font-family: 'Abel', sans-serif;
   color: #000;
   font-weight: 500;
   text-decoration: none;

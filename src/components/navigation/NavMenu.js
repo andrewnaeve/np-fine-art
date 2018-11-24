@@ -90,7 +90,6 @@ const LinkWrapper = styled.div`
 const QuickLink = styled(Link)`
   display: flex;
   font-size: 2rem;
-  font-family: 'Abel', sans-serif;
   margin-bottom: 15px;
   color: black;
   text-decoration: none;

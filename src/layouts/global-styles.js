@@ -126,12 +126,13 @@ export const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
 
-  html,
 
+
+  html,
   body {
     height: 100%;
     width: 100%;
-    font-family: 'Abel', Arial, sans-serif;
+    font-family:  'Abel', 'Helvetica', sans-serif;
     line-height: 1;
   }
 
