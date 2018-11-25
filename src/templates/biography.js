@@ -14,7 +14,7 @@ export default ({
 }) => {
   return (
     <Container>
-      <Helmet title={'About'} />
+      <Helmet title={'Biography'} />
       <Wrapper>
         <AnimatedContainer>
           {({ handleLoad, renderAnimation }) =>
