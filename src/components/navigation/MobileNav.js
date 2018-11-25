@@ -13,7 +13,7 @@ class Mnav extends Component {
     return (
       <Container open={open}>
         <Hamburger toggleMenu={this.toggleMenu} />
-        <LinkWrapper>
+        <LinkWrapper open={open}>
           <QuickLink to="/" onClick={this.toggleMenu} activeStyle={{ color: '#78D5E3' }}>
             Home
           </QuickLink>
@@ -67,6 +67,21 @@ const LinkWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 60px;
+  will-change: opacity;
+  transition: opacity;
+  ${({ open }) => {
+    if (open) {
+      return `
+        opacity: 1; 
+        transition-delay: 0s;
+      `;
+    } else {
+      return `
+        opacity: 0;
+        transition-delay: 0.3s;
+      `;
+    }
+  }}
 `;
 
 const QuickLink = styled(Link)`
