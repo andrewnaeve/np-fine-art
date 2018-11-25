@@ -67,7 +67,6 @@ const LinkWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 60px;
-  will-change: opacity;
   transition: opacity;
   ${({ open }) => {
     if (open) {
