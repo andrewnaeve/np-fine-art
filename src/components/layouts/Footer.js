@@ -17,7 +17,7 @@ const Container = styled.footer`
   grid-area: footer;
   margin-bottom: 70px;
   ${media.m`
-    margin-bottom: 10px;
+    margin-bottom: 0px;
   `};
 `;
 
