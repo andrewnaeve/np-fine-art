@@ -56,7 +56,7 @@ const Container = styled.div`
   width: 100%;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-out;
+  transition: transform 0.5s ease;
   will-change: transform;
 `;
 
