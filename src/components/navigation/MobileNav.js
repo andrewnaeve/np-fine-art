@@ -51,12 +51,14 @@ const Container = styled.div`
 		display: none;`};
   position: fixed;
   bottom: 0;
+  left: 0;
   transform: ${({ open }) => (open ? 'none' : 'translateY(200px)')};
   height: 260px;
-  width: 100%;
+  width: 100vw;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
+  z-index: 2;
   will-change: transform;
 `;
 

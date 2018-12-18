@@ -21,7 +21,7 @@ const Hamburger = styled.div`
   flex-direction: column;
   padding-top: 4px;
   margin-bottom: 10px;
-  z-index: 1;
+  z-index: 3;
 `;
 
 const Patty = styled.div`
@@ -29,6 +29,6 @@ const Patty = styled.div`
   height: 4px;
   margin-bottom: 4px;
   background: #cdcdcd;
-  z-index: 1;
+  z-index: 3;
   border-radius: 3px;
 `;
