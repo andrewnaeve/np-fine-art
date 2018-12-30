@@ -6,7 +6,11 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "bulma": "^0.7.2",
+<<<<<<< HEAD
     "gatsby": "^2.0.78",
+=======
+    "gatsby": "^2.0.70",
+>>>>>>> c6db363e5b1e525040ddc63bca68412fec22738e
     "gatsby-image": "^2.0.25",
     "gatsby-plugin-favicon": "^3.1.4",
     "gatsby-plugin-layout": "^1.0.9",
@@ -24,12 +28,21 @@
     "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.5",
     "netlify-cms": "^2.3.1",
+<<<<<<< HEAD
     "parcel-bundler": "^1.11.3",
     "prop-types": "^15.6.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
     "react-spring": "^7.2.7",
+=======
+    "parcel-bundler": "^1.10.3",
+    "prop-types": "^15.6.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
+    "react-spring": "^7.1.3",
+>>>>>>> c6db363e5b1e525040ddc63bca68412fec22738e
     "react-youtube": "^7.8.0",
     "styled-components": "^4.1.3",
     "typeface-abel": "0.0.54",
