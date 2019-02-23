@@ -7,7 +7,7 @@ portfolio:
   - description: '48" x 36", oil on canvas'
     image: /img/lanterns.jpg
     title: Street Lights at LACMA
-  - description: Oil on linen
+  - description: oil on linen
     image: /img/img_2838.jpg
     title: Marcel Proust
   - description: '6" x 4", oil on linen'
