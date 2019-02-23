@@ -7,6 +7,9 @@ portfolio:
   - description: '48" x 36", oil on canvas'
     image: /img/lanterns.jpg
     title: Street Lights at LACMA
+  - description: Oil on linen
+    image: /img/img_2838.jpg
+    title: Marcel Proust
   - description: '6" x 4", oil on linen'
     image: /img/sail-boats.jpg
     title: Sailboats at Luxembourg
@@ -19,9 +22,6 @@ portfolio:
   - description: '60" x 70", oil on canvas'
     image: /img/lavendar.jpg
     title: Sentinels of Carmel
-  - description: '60" x 70", oil on canvas'
-    image: /img/pink-spray.jpg
-    title: Pink Spray
   - description: '60" x 70", oil on canvas'
     image: /img/what-me-worry.jpg
     title: 'What, Me Worry?'
@@ -40,6 +40,9 @@ portfolio:
   - description: '36" x 36", oil on canvas'
     image: /img/blue-floral.jpg
     title: Merrill's Bouquet
+  - description: oil on linen
+    image: /img/img_1542.jpg
+    title: Dante
   - description: '60" x 70", oil on canvas'
     image: /img/berries-at-the-huntington.jpg
     title: Berries at the Huntington
@@ -52,5 +55,14 @@ portfolio:
   - description: '36" x 36", oil on linen'
     image: /img/boquet.jpg
     title: The Last Bouquet
+  - description: Oil on canvas
+    image: /img/img_4010.jpg
+    title: Peaches
+  - description: oil on canvas
+    image: /img/img_8368.jpg
+    title: First Apples
+  - description: '48" x 36", oil on canvas'
+    image: /img/img_5000.jpg
+    title: Calla Lillies
 ---
 
