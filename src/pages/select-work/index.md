@@ -1,7 +1,7 @@
 ---
 templateKey: select-work
 portfolio:
-  - description: '48" x 36," oil on canvas'
+  - description: '48" x 36", oil on canvas'
     image: /img/img_3266.jpg
     title: Desert Shadows
   - description: '48" x 36", oil on canvas'
