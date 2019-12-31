@@ -2,7 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
-import AnimatedContainer from '../animation/AnimatedContainer';
+import { useAnimation, AnimatedDiv } from '../animation/useAnimation';
 
 export default ({
   image: {
@@ -10,23 +10,22 @@ export default ({
   },
   title,
   description
-}) => (
-  <Wrapper>
-    <AnimatedContainer>
-      {({ handleLoad, animatePosition }) =>
-        animatePosition(
-          <InnerWrapper>
-            <Img fluid={fluid} onLoad={() => handleLoad()} />
-            <TextContainer>
-              <Title> {title} </Title>
-              <Description> {description} </Description>
-            </TextContainer>
-          </InnerWrapper>
-        )
-      }
-    </AnimatedContainer>
-  </Wrapper>
-);
+}) => {
+  const { animationProps, handleLoad } = useAnimation();
+  return (
+    <Wrapper>
+      <AnimatedDiv style={animationProps}>
+        <InnerWrapper>
+          <Img fluid={fluid} onLoad={() => handleLoad()} />
+          <TextContainer>
+            <Title> {title} </Title>
+            <Description> {description} </Description>
+          </TextContainer>
+        </InnerWrapper>
+      </AnimatedDiv>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.div`
   display: flex;

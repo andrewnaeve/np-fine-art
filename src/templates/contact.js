@@ -1,28 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
-import AnimatedContainer from '../components/animation/AnimatedContainer';
-import { Instagram, Email } from '../components/contact/SocialIcons';
+import { useAnimation, AnimatedDiv } from '../components/animation/useAnimation';
+import SocialIcon from '../components/contact/SocialIcons';
 import { Helmet } from 'react-helmet';
+import instagramIcon from '../svg/instagramIcon.svg';
+import emailIcon from '../svg/emailIcon.svg';
 
-export default () => (
-  <Container>
-    <Helmet title={'Contact'} />
-    <Row>
-      <AnimatedContainer>
-        {({ handleLoad, renderAnimation }) =>
-          renderAnimation(<Email title={'Email'} handleLoad={handleLoad} />)
-        }
-      </AnimatedContainer>
-    </Row>
-    <Row>
-      <AnimatedContainer>
-        {({ handleLoad, renderAnimation }) =>
-          renderAnimation(<Instagram title={'Instagram'} handleLoad={handleLoad} />)
-        }
-      </AnimatedContainer>
-    </Row>
-  </Container>
-);
+export default () => {
+  const { animationProps: emailAnimation, handleLoad: emailLoad } = useAnimation();
+  const { animationProps: instaAnimation, handleLoad: instaLoad } = useAnimation();
+  return (
+    <Container>
+      <Helmet title={'Contact'} />
+      <Row>
+        <AnimatedDiv style={emailAnimation}>
+          <SocialIcon
+            href={'mailto:nplank@me.com'}
+            text={'NPlank@me.com'}
+            src={emailIcon}
+            handleLoad={emailLoad}
+          />
+        </AnimatedDiv>
+      </Row>
+      <Row>
+        <AnimatedDiv style={instaAnimation}>
+          <SocialIcon
+            href={'https://www.instagram.com/nplank/?hl=en'}
+            src={instagramIcon}
+            text={'Instagram'}
+            handleLoad={instaLoad}
+          />
+        </AnimatedDiv>
+      </Row>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   display: flex;

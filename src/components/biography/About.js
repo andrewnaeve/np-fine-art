@@ -5,7 +5,7 @@ import { media } from '../../utilities/style-utils';
 export default ({ html }) => <Text dangerouslySetInnerHTML={{ __html: html }} />;
 
 const Text = styled.div`
-  margin-top: 20px;
+  margin-top: 40px;
   justify-content: center;
   margin-bottom: 20px;
   ${media.xs`

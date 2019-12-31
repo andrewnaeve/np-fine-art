@@ -1,19 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import instagramIcon from '../../svg/instagramIcon.svg';
-import emailIcon from '../../svg/emailIcon.svg';
 
-export const Instagram = props => (
-  <SocialLink href="https://www.instagram.com/nplank/?hl=en" target="_blank">
-    Instagram
-    <Icons src={instagramIcon} onLoad={props.handleLoad} />
-  </SocialLink>
-);
-
-export const Email = props => (
-  <SocialLink href="mailto:nplank@me.com">
-    NPlank@me.com
-    <Icons src={emailIcon} onLoad={props.handleLoad} />
+export default ({ href, text, src, handleLoad }) => (
+  <SocialLink href={href}>
+    {text}
+    <Icons src={src} onLoad={handleLoad} />
   </SocialLink>
 );
 

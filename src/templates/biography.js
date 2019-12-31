@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import AnimatedContainer from '../components/animation/AnimatedContainer';
+import { useAnimation, AnimatedDiv } from '../components/animation/useAnimation';
 import YoutubePlayer from '../components/biography/YoutubePlayer';
 import About from '../components/biography/About';
 import { media } from '../utilities/style-utils';
@@ -12,15 +12,14 @@ export default ({
     markdownRemark: { html }
   }
 }) => {
+  const { animationProps, handleLoad } = useAnimation();
   return (
     <Container>
       <Helmet title={'Biography'} />
       <Wrapper>
-        <AnimatedContainer>
-          {({ handleLoad, renderAnimation }) =>
-            renderAnimation(<YoutubePlayer handleLoad={handleLoad} />)
-          }
-        </AnimatedContainer>
+        <AnimatedDiv style={animationProps}>
+          <YoutubePlayer handleLoad={handleLoad} />)
+        </AnimatedDiv>
       </Wrapper>
       <About html={html} />
     </Container>

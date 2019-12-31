@@ -1,47 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Hamburger from './Hamburger';
 import { Link } from 'gatsby';
 import { media } from '../../utilities/style-utils';
 
-class Mnav extends Component {
-  state = {
-    open: false
-  };
-  render() {
-    const { open } = this.state;
-    return (
-      <Container open={open}>
-        <Hamburger toggleMenu={this.toggleMenu} />
-        <LinkWrapper open={open}>
-          <QuickLink to="/" onClick={this.toggleMenu} activeStyle={{ color: '#78D5E3' }}>
-            Home
-          </QuickLink>
-          <QuickLink to="/select-work" onClick={this.toggleMenu} activeStyle={{ color: '#78D5E3' }}>
-            Select Works
-          </QuickLink>
-          <QuickLink to="/biography" onClick={this.toggleMenu} activeStyle={{ color: '#78D5E3' }}>
-            Biography
-          </QuickLink>
-          <QuickLink
-            to="/curriculum-vitae"
-            onClick={this.toggleMenu}
-            activeStyle={{ color: '#78D5E3' }}
-          >
-            CV
-          </QuickLink>
-          <QuickLink to="/contact" onClick={this.toggleMenu} activeStyle={{ color: '#78D5E3' }}>
-            Contact
-          </QuickLink>
-        </LinkWrapper>
-      </Container>
-    );
+function Mnav() {
+  const [open, setOpen] = useState(false);
+  function toggleMenu() {
+    setOpen(!open);
   }
-  toggleMenu = () => {
-    this.setState(({ open }) => ({
-      open: !open
-    }));
-  };
+  return (
+    <Container open={open}>
+      <Hamburger toggleMenu={toggleMenu} />
+      <LinkWrapper open={open}>
+        <QuickLink to="/" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+          Home
+        </QuickLink>
+        <QuickLink to="/select-work" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+          Select Works
+        </QuickLink>
+        <QuickLink to="/biography" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+          Biography
+        </QuickLink>
+        <QuickLink to="/curriculum-vitae" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+          CV
+        </QuickLink>
+        <QuickLink to="/contact" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+          Contact
+        </QuickLink>
+      </LinkWrapper>
+    </Container>
+  );
 }
 
 export default Mnav;
