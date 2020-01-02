@@ -4,7 +4,7 @@ import Hamburger from './Hamburger';
 import { Link } from 'gatsby';
 import { media } from '../../utilities/style-utils';
 
-function Mnav() {
+export default function MobileNav() {
   const [open, setOpen] = useState(false);
   function toggleMenu() {
     setOpen(!open);
@@ -33,15 +33,13 @@ function Mnav() {
   );
 }
 
-export default Mnav;
-
 const Container = styled.div`
   ${media.m`
 		display: none;`};
   position: fixed;
   bottom: 0;
   left: 0;
-  transform: ${({ open }) => (open ? 'none' : 'translateY(200px)')};
+  transform: ${({ open }) => `translate3d(0, ${open ? 0 : 200}px, 0)`};
   height: 260px;
   width: 100vw;
   background: #fff;

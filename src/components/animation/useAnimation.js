@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-
 import { useSpring, animated } from 'react-spring';
 
 export function useAnimation({ opacity = true } = {}) {

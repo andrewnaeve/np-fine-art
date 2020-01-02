@@ -18,7 +18,7 @@ export default ({
       <Helmet title={'Biography'} />
       <Wrapper>
         <AnimatedDiv style={animationProps}>
-          <YoutubePlayer handleLoad={handleLoad} />)
+          <YoutubePlayer handleLoad={handleLoad} />
         </AnimatedDiv>
       </Wrapper>
       <About html={html} />
