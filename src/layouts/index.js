@@ -7,34 +7,40 @@ import MobileNav from '../components/navigation/MobileNav';
 import { GlobalStyle } from './global-styles';
 import 'typeface-abel';
 
-export default ({ children }) => (
-  <Container>
-    <GlobalStyle />
-    <Header />
-    <Navbar />
-    <Body>{children}</Body>
-    <Footer />
-    <MobileNav />
-  </Container>
-);
+export default function Layout({ children }) {
+  return (
+    <Container>
+      <GlobalStyle />
+      <Header />
+      <Navbar />
+      <Separator />
+      <Body>{children}</Body>
+      <Footer />
+      <MobileNav />
+    </Container>
+  );
+}
 
 const Container = styled.div`
-  display: grid;
-  grid-template-areas:
-    'header'
-    'navbar'
-    'content'
-    'footer';
-  grid-template-rows: auto auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   grid-template-columns: 100%;
   min-height: 100vh;
-  grid-gap: 10px;
-  padding: 0px 2%;
+  align-items: center;
+  padding: 0px 20px;
+`;
+
+const Separator = styled.div`
+  border-top: 1px solid #a9a9a9;
+  height: 1px;
+  width: 90%;
+  color: black;
+  margin-bottom: 20px;
 `;
 
 const Body = styled.div`
   display: flex;
-  grid-area: content;
   height: 100%;
   width: 100%;
+  flex: 1;
 `;

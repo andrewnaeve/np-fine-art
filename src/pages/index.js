@@ -4,20 +4,20 @@ import { graphql } from 'gatsby';
 import LandingImage from '../components/home/LandingImage';
 import { Helmet } from 'react-helmet';
 
-export default ({
+export default function App({
   data: {
     landingImage: {
       childImageSharp: { fluid }
     }
   }
-}) => {
+}) {
   return (
     <Section>
       <Helmet title={'Nancy Plank'} />
       <LandingImage fluid={fluid} />
     </Section>
   );
-};
+}
 
 const Section = styled.section`
   display: flex;

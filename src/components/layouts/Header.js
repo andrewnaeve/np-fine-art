@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
 import { Link } from 'gatsby';
 
-export default () => <Title to="/">Nancy Plank</Title>;
+export default function Header() {
+  return <Title to="/">Nancy Plank</Title>;
+}
 
 const Title = styled(Link)`
   display: flex;
-  grid-area: header;
   color: #000;
   font-weight: 500;
   text-decoration: none;

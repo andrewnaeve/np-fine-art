@@ -3,21 +3,16 @@ import styled from 'styled-components';
 import { useAnimation, AnimatedDiv } from '../animation/useAnimation';
 import Img from 'gatsby-image';
 
-export default ({ fluid }) => {
+export default function LandingImage({ fluid }) {
   const { animationProps, handleLoad } = useAnimation();
   return (
     <AnimatedDiv style={animationProps}>
       <ImageWrapper>
-        <StyledImage
-          fluid={fluid}
-          onLoad={() => {
-            handleLoad();
-          }}
-        />
+        <StyledImage fluid={fluid} onLoad={handleLoad} />
       </ImageWrapper>
     </AnimatedDiv>
   );
-};
+}
 
 const ImageWrapper = styled.div`
   position: relative;

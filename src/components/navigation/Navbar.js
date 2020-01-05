@@ -5,35 +5,36 @@ import { media } from '../../utilities/style-utils';
 
 const color = '#78D5E3';
 
-const Navbar = () => (
-  <NavContainer>
-    <NavList>
-      <Item>
-        <StyledLink to="/select-work" activeStyle={{ color }}>
-          Select Work
-        </StyledLink>
-      </Item>
-      <Item>
-        <StyledLink to="/biography" activeStyle={{ color }}>
-          Biography
-        </StyledLink>
-      </Item>
-      <Item>
-        <StyledLink to="/curriculum-vitae" activeStyle={{ color }}>
-          CV
-        </StyledLink>
-      </Item>
-      <Item>
-        <StyledLink to="/contact" activeStyle={{ color }}>
-          Contact
-        </StyledLink>
-      </Item>
-    </NavList>
-  </NavContainer>
-);
+export default function Navbar() {
+  return (
+    <NavContainer>
+      <NavList>
+        <Item>
+          <StyledLink to="/select-work/" activeStyle={{ color }}>
+            Select Work
+          </StyledLink>
+        </Item>
+        <Item>
+          <StyledLink to="/biography/" activeStyle={{ color }}>
+            Biography
+          </StyledLink>
+        </Item>
+        <Item>
+          <StyledLink to="/curriculum-vitae/" activeStyle={{ color }}>
+            CV
+          </StyledLink>
+        </Item>
+        <Item>
+          <StyledLink to="/contact/" activeStyle={{ color }}>
+            Contact
+          </StyledLink>
+        </Item>
+      </NavList>
+    </NavContainer>
+  );
+}
 
 const NavContainer = styled.div`
-  grid-area: navbar;
   ${media.xs`
 		display: none;`};
   ${media.m`
@@ -42,9 +43,6 @@ const NavContainer = styled.div`
   justify-content: center;
   margin-bottom: 10px;
   padding: 10px 0;
-  border-bottom: 1px solid #a9a9a9;
-  width: 90%;
-  box-shadow: 0 6px 6px -6px rgba(184, 184, 184, 0.5);
 `;
 
 const NavList = styled.ul`
@@ -66,5 +64,3 @@ const StyledLink = styled(Link)`
     color: #747d7d;
   }
 `;
-
-export default Navbar;

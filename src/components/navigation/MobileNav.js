@@ -16,16 +16,16 @@ export default function MobileNav() {
         <QuickLink to="/" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
           Home
         </QuickLink>
-        <QuickLink to="/select-work" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+        <QuickLink to="/select-work/" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
           Select Works
         </QuickLink>
-        <QuickLink to="/biography" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+        <QuickLink to="/biography/" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
           Biography
         </QuickLink>
-        <QuickLink to="/curriculum-vitae" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+        <QuickLink to="/curriculum-vitae/" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
           CV
         </QuickLink>
-        <QuickLink to="/contact" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
+        <QuickLink to="/contact/" onClick={toggleMenu} activeStyle={{ color: '#78D5E3' }}>
           Contact
         </QuickLink>
       </LinkWrapper>
@@ -44,7 +44,7 @@ const Container = styled.div`
   width: 100vw;
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
   z-index: 2;
   will-change: transform;
 `;
@@ -57,19 +57,8 @@ const LinkWrapper = styled.div`
   justify-content: center;
   padding-top: 60px;
   transition: opacity;
-  ${({ open }) => {
-    if (open) {
-      return `
-        opacity: 1; 
-        transition-delay: 0s;
-      `;
-    } else {
-      return `
-        opacity: 0;
-        transition-delay: 0.3s;
-      `;
-    }
-  }}
+  ${({ open }) =>
+    open ? 'opacity: 1; transition-delay: 0s;' : 'opacity: 0; transition-delay: 0.2s'}
 `;
 
 const QuickLink = styled(Link)`

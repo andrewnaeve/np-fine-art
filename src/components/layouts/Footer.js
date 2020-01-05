@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
 
+const year = new Date().getFullYear();
 export default () => {
-  const year = new Date().getFullYear();
   return (
     <Container>
       <Copyright>&copy;{year}, Nancy Plank. All rights reserved.</Copyright>
@@ -14,7 +14,6 @@ export default () => {
 const Container = styled.footer`
   display: flex;
   justify-content: center;
-  grid-area: footer;
   margin-bottom: 70px;
   ${media.m`
     margin-bottom: 0px;
