@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { useAnimation, AnimatedDiv } from '../components/animation/useAnimation';
 import YoutubePlayer from '../components/biography/YoutubePlayer';
 import About from '../components/biography/About';
 import { media } from '../utilities/style-utils';
-import { Helmet } from 'react-helmet';
 
 export default ({
   data: {
@@ -15,7 +15,7 @@ export default ({
   const { animationProps, handleLoad } = useAnimation();
   return (
     <Container>
-      <Helmet title={'Biography'} />
+      <Helmet title="Biography" />
       <Wrapper>
         <AnimatedDiv style={animationProps}>
           <YoutubePlayer handleLoad={handleLoad} />

@@ -4,7 +4,14 @@ import styled from 'styled-components';
 export default ({ href, text, src, handleLoad }) => (
   <SocialLink href={href}>
     {text}
-    <Icons src={src} onLoad={handleLoad} aria-hidden="true" />
+    <Icons
+      src={src}
+      onLoad={() => {
+        console.log(`icon ${text} loaded`);
+        handleLoad();
+      }}
+      aria-hidden="true"
+    />
   </SocialLink>
 );
 

@@ -1,12 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
 import { media } from '../utilities/style-utils';
 import NancyPlank from '../components/curriculum-vitae/NancyPlank';
 import Publications from '../components/curriculum-vitae/Publications';
 import Shows from '../components/curriculum-vitae/Shows';
 import Education from '../components/curriculum-vitae/Education';
-import { Helmet } from 'react-helmet';
+
 export default ({
   data: {
     markdownRemark: { frontmatter }
@@ -20,7 +21,7 @@ export default ({
 
   return (
     <Container>
-      <Helmet title={'Curriculum Vitae'} />
+      <Helmet title="Curriculum Vitae" />
       <Row>
         <NancyPlank fluid={fluid} />
       </Row>

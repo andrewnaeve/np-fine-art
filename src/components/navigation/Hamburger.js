@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default ({ toggleMenu }) => (
-  <Hamburger onClick={toggleMenu}>
-    <Patty />
-    <Patty />
-    <Patty />
-  </Hamburger>
-);
+export default function HamburgerMenu({ toggleMenu }) {
+  return (
+    <Hamburger onClick={toggleMenu}>
+      <Patty />
+      <Patty />
+      <Patty />
+    </Hamburger>
+  );
+}
 
 const Hamburger = styled.div`
   display: flex;

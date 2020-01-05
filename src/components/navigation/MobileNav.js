@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Hamburger from './Hamburger';
 import { Link } from 'gatsby';
+import Hamburger from './Hamburger';
 import { media } from '../../utilities/style-utils';
 
 export default function MobileNav() {

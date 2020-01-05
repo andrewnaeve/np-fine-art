@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { media } from '../../utilities/style-utils';
-import { Link } from 'gatsby';
 
 export default function Header() {
   return <Title to="/">Nancy Plank</Title>;

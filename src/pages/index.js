@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import LandingImage from '../components/home/LandingImage';
 import { Helmet } from 'react-helmet';
+import LandingImage from '../components/home/LandingImage';
 
 export default function App({
   data: {
@@ -13,7 +13,7 @@ export default function App({
 }) {
   return (
     <Section>
-      <Helmet title={'Nancy Plank'} />
+      <Helmet title="Nancy Plank" />
       <LandingImage fluid={fluid} />
     </Section>
   );

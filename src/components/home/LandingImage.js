@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useAnimation, AnimatedDiv } from '../animation/useAnimation';
 import Img from 'gatsby-image';
+import { useAnimation, AnimatedDiv } from '../animation/useAnimation';
 
 export default function LandingImage({ fluid }) {
   const { animationProps, handleLoad } = useAnimation();

@@ -1,10 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 import Header from '../components/layouts/Header';
 import Footer from '../components/layouts/Footer';
 import Navbar from '../components/navigation/Navbar';
-import styled from 'styled-components';
 import MobileNav from '../components/navigation/MobileNav';
-import { GlobalStyle } from './global-styles';
+import GlobalStyle from './global-styles';
 import 'typeface-abel';
 
 export default function Layout({ children }) {

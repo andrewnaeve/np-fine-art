@@ -16,7 +16,7 @@ export default () => (
         <P>San Diego, CA</P>
         <br />
         <P>
-          <Bold>Watt's Atelier</Bold>, 2015
+          <Bold>Watt&apos;s Atelier</Bold>, 2015
         </P>
         <P>Oil painting with Meadow Gist and Ben Young</P>
         <P>Encinitas, CA</P>
