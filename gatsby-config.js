@@ -25,13 +25,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/img`,
-        name: 'images'
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         path: `${__dirname}/static/img`,
         name: 'images'
       }
@@ -60,8 +53,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: './src/favicon.png',
-
+        logo: `${__dirname}/src/assets/img/favicon.png`,
         // WebApp Manifest Configuration
         appName: null, // Inferred with your package.json
         appDescription: null,
@@ -87,6 +79,14 @@ module.exports = {
           twitter: false,
           yandex: false,
           windows: false
+        }
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/
         }
       }
     },

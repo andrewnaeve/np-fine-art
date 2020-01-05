@@ -1,21 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default ({ href, text, src, handleLoad }) => (
-  <SocialLink href={href}>
-    {text}
-    <Icons
-      src={src}
-      onLoad={() => {
-        console.log(`icon ${text} loaded`);
-        handleLoad();
-      }}
-      aria-hidden="true"
-    />
-  </SocialLink>
-);
+export default function SocialLink({ href, text, children }) {
+  return (
+    <StyledSocialLink href={href}>
+      {text}
+      {children}
+    </StyledSocialLink>
+  );
+}
 
-const SocialLink = styled.a`
+const StyledSocialLink = styled.a`
   display: flex;
   font-size: 2rem;
   justify-content: center;
@@ -25,14 +20,4 @@ const SocialLink = styled.a`
   color: #747d7d;
   margin-left: 10px;
   margin-right: 10px;
-`;
-
-const Icons = styled.img`
-  display: flex;
-  height: 80px;
-  width: 80px;
-  justify-content: center;
-  align-items: start;
-  margin-top: 10px;
-  margin-bottom: 20px;
 `;

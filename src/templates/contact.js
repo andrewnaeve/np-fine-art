@@ -1,40 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useTrail, animated } from 'react-spring';
 import { Helmet } from 'react-helmet';
-import { useAnimation, AnimatedDiv } from '../components/animation/useAnimation';
-import SocialIcon from '../components/contact/SocialIcons';
-import instagramIcon from '../svg/instagramIcon.svg';
-import emailIcon from '../svg/emailIcon.svg';
+import iconConfig from '../components/contact/iconConfig';
 
-export default () => {
-  const { animationProps: emailAnimation, handleLoad: emailLoad } = useAnimation();
-  const { animationProps: instaAnimation, handleLoad: instaLoad } = useAnimation();
+export default function Contact() {
+  const [loaded, set] = useState(false);
+  const icons = [...iconConfig.keys()];
+  const trail = useTrail(icons.length, {
+    opacity: loaded ? 1 : 0,
+    transform: `translate3d(0, ${loaded ? 0 : 10}px, 0)`
+  });
+  useEffect(() => {
+    set(true);
+  }, []);
   return (
     <Container>
       <Helmet title="Contact" />
-      <Row>
-        <AnimatedDiv style={emailAnimation}>
-          <SocialIcon
-            href="mailto:nplank@me.com"
-            text="NPlank@me.com"
-            src={emailIcon}
-            handleLoad={emailLoad}
-          />
-        </AnimatedDiv>
-      </Row>
-      <Row>
-        <AnimatedDiv style={instaAnimation}>
-          <SocialIcon
-            href="https://www.instagram.com/nplank/?hl=en"
-            src={instagramIcon}
-            text="Instagram"
-            handleLoad={instaLoad}
-          />
-        </AnimatedDiv>
-      </Row>
+      {trail.map(({ opacity, transform }, index) => {
+        const iconName = icons[index];
+        const icon = iconConfig.get(iconName);
+        return (
+          <Row key={iconName}>
+            <animated.div style={{ opacity, transform }}>{icon}</animated.div>
+          </Row>
+        );
+      })}
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   display: flex;
