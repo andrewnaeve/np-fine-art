@@ -8,17 +8,17 @@ import Publications from '../components/curriculum-vitae/Publications';
 import Shows from '../components/curriculum-vitae/Shows';
 import Education from '../components/curriculum-vitae/Education';
 
-export default ({
+export default function CV({
   data: {
-    markdownRemark: { frontmatter }
-  }
-}) => {
-  const {
-    profilePicture: {
-      childImageSharp: { fluid }
+    markdownRemark: {
+      frontmatter: {
+        profilePicture: {
+          childImageSharp: { fluid }
+        }
+      }
     }
-  } = frontmatter;
-
+  }
+}) {
   return (
     <Container>
       <Helmet title="Curriculum Vitae" />
@@ -34,7 +34,7 @@ export default ({
       </RightColumn>
     </Container>
   );
-};
+}
 
 const Container = styled.div`
   display: grid;

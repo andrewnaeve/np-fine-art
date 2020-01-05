@@ -17,15 +17,21 @@ export default function Contact() {
   return (
     <Container>
       <Helmet title="Contact" />
-      {trail.map(({ opacity, transform }, index) => {
-        const iconName = icons[index];
-        const icon = iconConfig.get(iconName);
-        return (
-          <Row key={iconName}>
-            <animated.div style={{ opacity, transform }}>{icon}</animated.div>
-          </Row>
-        );
-      })}
+
+      <Text>Prints are available.</Text>
+      <Text>Please contact for more information.</Text>
+
+      <IconContainer>
+        {trail.map(({ opacity, transform }, index) => {
+          const iconName = icons[index];
+          const icon = iconConfig.get(iconName);
+          return (
+            <Row key={iconName}>
+              <animated.div style={{ opacity, transform }}>{icon}</animated.div>
+            </Row>
+          );
+        })}
+      </IconContainer>
     </Container>
   );
 }
@@ -33,11 +39,24 @@ export default function Contact() {
 const Container = styled.div`
   display: flex;
   flex: 1;
-  flex-direction: row;
-  max-width: 60%;
+  flex-direction: column;
   margin: 0 auto;
+  width: 100%;
+  align-items: center;
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  flex: 1;
+  width: 100%;
   justify-content: space-around;
   flex-wrap: wrap;
+`;
+
+const Text = styled.p`
+  display: flex;
+  text-align: center;
+  font-size: 1.3rem;
 `;
 
 const Row = styled.div`

@@ -25,20 +25,3 @@ collections:
                   { label: 'Image', name: image, widget: image },
                 ],
             }
-      - file: 'src/pages/biography/index.md'
-        label: 'Biography'
-        name: 'biography'
-        fields:
-          - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'biography' }
-          - { label: Body, name: body, widget: markdown }
-      - file: 'src/pages/curriculum-vitae/index.md'
-        label: 'Curriculum Vitae'
-        name: 'curriculum-vitae'
-        fields:
-          - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'curriculum-vitae',
-            }
-          - { label: Profile Picture, name: profilePicture, widget: image }
