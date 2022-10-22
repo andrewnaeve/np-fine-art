@@ -1,20 +1,52 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import LandingImage from '../components/home/LandingImage';
 
-export default function App({
-  data: {
-    landingImage: {
-      childImageSharp: { fluid }
+export default function App() {
+  const [timeLeft, setTimeLeft] = useState(7);
+
+  const interval = useRef();
+  useEffect(() => {
+    const { current } = interval;
+    if (!current) {
+      interval.current = setInterval(
+        () =>
+          setTimeLeft(prev => {
+            if (prev > 0) {
+              return prev - 1;
+            }
+            window.clearInterval(interval.current);
+            return 0;
+          }),
+        1000
+      );
     }
-  }
-}) {
+  }, []);
+
+  // useEffect(() => {
+  //   if (!timeLeft) {
+  //     window.location = 'https://www.nancyplankart.com/';
+  //   }
+  // }, [timeLeft]);
   return (
     <Section>
       <Helmet title="Nancy Plank" />
-      <LandingImage fluid={fluid} />
+      <Container>
+        <Header>This site has moved!</Header>
+        <Text>
+          Please update your bookmarks to{' '}
+          <a
+            target="_blank2"
+            referrerPolicy="no-referrer"
+            rel="noopener"
+            href="https://www.nancyplankart.com"
+          >
+            nancyplankart.com
+          </a>
+        </Text>
+        <Text>You will be redirected in </Text>
+        <Text>{timeLeft}</Text>
+      </Container>
     </Section>
   );
 }
@@ -27,14 +59,19 @@ const Section = styled.section`
   justify-content: flex-start;
 `;
 
-export const pageQuery = graphql`
-  query LandingPageQuery {
-    landingImage: file(relativePath: { eq: "lavendar.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-  }
+const Container = styled.div`
+  padding: 32px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+const Header = styled.h1`
+  font-size: 4em;
+`;
+
+const Text = styled.div`
+  font-size: 2em;
 `;
