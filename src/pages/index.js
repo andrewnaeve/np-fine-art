@@ -23,11 +23,11 @@ export default function App() {
     }
   }, []);
 
-  // useEffect(() => {
-  //   if (!timeLeft) {
-  //     window.location = 'https://www.nancyplankart.com/';
-  //   }
-  // }, [timeLeft]);
+  useEffect(() => {
+    if (!timeLeft) {
+      window.location = 'https://www.nancyplankart.com/';
+    }
+  }, [timeLeft]);
   return (
     <Section>
       <Helmet title="Nancy Plank" />
