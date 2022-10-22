@@ -66,13 +66,15 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   gap: 12px;
 `;
 
 const Header = styled.h1`
-  font-size: 4em;
+  font-size: 3em;
 `;
 
 const Text = styled.div`
   font-size: 2em;
+  margin: 6px;
 `;
