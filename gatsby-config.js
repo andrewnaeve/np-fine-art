@@ -8,8 +8,6 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {}
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     `gatsby-plugin-layout`,
     {
       resolve: `gatsby-plugin-favicon`,
