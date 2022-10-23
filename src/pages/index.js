@@ -24,37 +24,27 @@ export default function App() {
       window.location = 'https://www.nancyplankart.com/';
     }
   }, [timeLeft]);
+
   return (
-    <Section>
+    <Container>
       <Helmet title="Nancy Plank" />
-      <Container>
-        <Header>This site has moved!</Header>
-        <Text>
-          Please update your bookmarks to{' '}
-          <a
-            target="_blank2"
-            referrerPolicy="no-referrer"
-            rel="noopener"
-            href="https://www.nancyplankart.com"
-          >
-            nancyplankart.com
-          </a>
-        </Text>
-        <Text>You will be redirected in </Text>
-        <Text>{timeLeft}</Text>
-      </Container>
-    </Section>
+      <Header>This site has moved!</Header>
+      <Text>
+        Please update your bookmarks to{' '}
+        <a
+          target="_blank2"
+          referrerPolicy="no-referrer"
+          rel="noopener"
+          href="https://www.nancyplankart.com"
+        >
+          nancyplankart.com
+        </a>
+      </Text>
+      <Text>You will be redirected in </Text>
+      <Text>{timeLeft}</Text>
+    </Container>
   );
 }
-
-const Section = styled.section`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-`;
 
 const Container = styled.div`
   padding: 32px;
