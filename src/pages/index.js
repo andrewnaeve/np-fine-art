@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 export default function App() {
-  const [timeLeft, setTimeLeft] = useState(7);
+  const [timeLeft, setTimeLeft] = useState(4);
 
   const interval = useRef();
   useEffect(() => {
@@ -12,11 +12,7 @@ export default function App() {
       interval.current = setInterval(
         () =>
           setTimeLeft(prev => {
-            if (prev > 0) {
-              return prev - 1;
-            }
-            window.clearInterval(interval.current);
-            return 0;
+            return prev > 0 ? prev - 1 : 0;
           }),
         1000
       );
